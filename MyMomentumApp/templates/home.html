@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% load static %}
+{% block content %}
+
+<h1>Instruments</h1>
+
+<table data-toggle="table"
+       data-classes="table table-hover table-condensed"
+       data-striped="true"
+       data-sort-name="name"
+       data-sort-order="desc",
+       data-search="true"
+       data-show-refresh="true"
+       data-show-toggle="true"
+       data-show-columns="true"
+       data-url={% static filename %}> 
+    <thead>
+        <tr>
+            <th data-field="Symbol" 
+                data-sortable="true">
+                Symbol
+            </th>       
+            <th data-field="Name" 
+                data-sortable="true">
+                Name
+            </th>       
+            <th data-field="Momentum" 
+                data-sortable="true">
+                Momentum
+            </th>                   
+            <th data-field="Slope" 
+                data-sortable="true">
+                Slope
+            </th>                   
+            <th data-field="R2" 
+                data-sortable="true">
+                Volatility (R2)
+            </th>                   
+            <th data-field="Bullish Market" 
+                data-sortable="true">
+                Bullish Market
+            </th>                   
+           <th data-field="Bullish Stock" 
+                data-sortable="true">
+                Bullish Stock
+            </th>                   
+            <th data-field="Potential Buy" 
+                data-sortable="true">
+                Potential Buy
+            </th>                   
+            <th data-field="Shares to Buy" 
+                data-sortable="true">
+                Shares to Buy
+            </th>                   
+        </tr>
+    </thead>
+</table>
+
+{% endblock %}
